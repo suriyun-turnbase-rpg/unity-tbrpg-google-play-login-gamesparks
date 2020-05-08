@@ -27,7 +27,7 @@ public class GamesparksGooglePlayLogin : BaseGooglePlayLoginService
             else
             {
                 Debug.LogError("GameSparks error while login: " + authResponse.Errors.JSON);
-                result.error = GameServiceErrorCode.UNKNOW;
+                result.error = GameServiceErrorCode.INVALID_LOGIN_TOKEN;
                 onFinish(result);
             }
         });
